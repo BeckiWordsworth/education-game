@@ -4,8 +4,7 @@ import styled from 'styled-components'
 export default function Index() {
   let userLogged = null;
     return (
-      <div className="homepage">
-
+      <HomePage>
         <Hero>
           <HeroIcon><img src="/logo.png" alt="Logo" /></HeroIcon>
           <HeroContent>
@@ -56,10 +55,14 @@ export default function Index() {
             Learning Physics the fun way with DuoPhysics.
           </FooterContent>
         </Footer>
-      </div>
+      </HomePage>
     )
   }
 
+
+const HomePage = styled.div`
+
+`;
 
 const Hero = styled.div`
     background-color: #1866a6;
