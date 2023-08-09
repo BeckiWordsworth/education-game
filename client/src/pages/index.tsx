@@ -16,8 +16,9 @@ export default function Index() {
           </HeroContent>
         </Hero>
 
+      <Section>
         <section>
-          <div className="section-content">
+        <SectionContent>
             <h2>A fun way to learn Physics</h2>
             <p>Learning with DuoPhysics is fun! Earn points for correct answers, collect badges, and level up. This bite-sized lessons are effective, and we have proof that it works. We have a range of subjects for your to dive into which are both fun and interesting.</p>
             <ScienceIcon>
@@ -32,8 +33,9 @@ export default function Index() {
                 <img src="/newton-cradle.png" alt="newton" />
                 <img src="/space.png" alt="space" />
             </ScienceIcon>
-            </div>
+            </SectionContent>
         </section>
+      </Section>
 
         <Section>
          <section>
