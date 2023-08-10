@@ -1,11 +1,9 @@
 import styled from "styled-components";
-import Header from "../components/header/Header";
 
 export default function Index() {
   let userLogged = null;
   return (
     <HomePage>
-      <Header />
       <Hero>
         <HeroIcon>
           <img src="/logo.png" alt="Logo" />
