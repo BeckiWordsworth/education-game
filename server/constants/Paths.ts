@@ -1,1 +1,2 @@
-export const CREATE_USER = "/users";
+export const CREATE_USER = "/user";
+export const GET_USER = "/user"
