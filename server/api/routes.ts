@@ -17,6 +17,9 @@ import {
   CREATE_QUESTION,
   UPDATE_QUESTION,
   DELETE_QUESTION,
+  GET_RESULT,
+  DELETE_RESULT,
+  GET_SCORES,
 } from "../constants/Paths";
 import CreateUserSchema from "./schemas/CreateUserSchema";
 import { User } from "../api/user";
@@ -68,6 +71,17 @@ export default (app: Application, db: Db) => {
     validate({ body: DeleteQuestionSchema as JSONSchema4 }),
     (req, res) => deleteQuestion.handle(req, res)
   );
+
+  //results
+  app.get(GET_RESULT, (req, res) => getResults.handle(req as any, res));
+  app.delete(
+    DELETE_RESULT,
+    validate({ body: DeleteResultSchema as JSONSchema4 }),
+    (req, res) => deleteResult.handle(req, res)
+  );
+
+  //scores
+  app.get(GET_SCORES, (req, res) => getScores.handle(req as any, res));
 
   app.use(express.static("app/build"));
 };

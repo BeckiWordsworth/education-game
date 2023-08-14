@@ -15,3 +15,5 @@ export const DELETE_QUESTION = "/questions";
 
 export const GET_RESULT = "/results";
 export const DELETE_RESULT = "/results";
+
+export const GET_SCORES = "/results";
