@@ -17,7 +17,7 @@ export class CreateUserHandler {
   //   });
   // });
 
-  async handle({ body }: Request<{}, {}>, res: Response<UserModel>) {
+  async handle({ body }: Request<{}>, res: Response<UserModel>) {
     if (!body.username || !body.email || !body.password) {
       res.status(400).json({
         error: "You must provide a username, email and password.",
@@ -31,7 +31,7 @@ export class CreateUserHandler {
 
       const createdUser = await this.userRepo.createUser(UserCreate);
 
-      res.json(new ResponseModel(createdUser));
+      res.status(201).json(createdUser);
     }
   }
 }
